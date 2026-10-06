@@ -1,6 +1,6 @@
 package com.devvault.controller;
 import com.devvault.dto.*; import com.devvault.service.ProjectService; import jakarta.validation.Valid; import org.springframework.http.*; import org.springframework.web.bind.annotation.*; import java.util.*;
-@RestController @RequestMapping("/api/projects") @CrossOrigin(origins="http://localhost:5173")
+@RestController @RequestMapping("/api/projects")
 public class ProjectController {
  private final ProjectService service; public ProjectController(ProjectService s){service=s;}
  @GetMapping public List<ProjectResponse> all(){return service.all();}
