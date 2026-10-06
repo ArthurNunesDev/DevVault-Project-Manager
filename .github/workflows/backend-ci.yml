@@ -33,5 +33,10 @@ jobs:
           java-version: "21"
           cache: maven
 
+      - name: Setup Maven
+        uses: stCarolas/setup-maven@v5
+        with:
+          maven-version: "3.9.16"
+
       - name: Test backend
-        run: ./mvnw -B test
+        run: mvn -B test
