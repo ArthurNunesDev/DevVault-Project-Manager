@@ -1,0 +1,9 @@
+@use 'variables' as *;
+.panel,.stat,.card,.task{background:$surface;border:1px solid $border;border-radius:$radius}.panel{padding:20px;margin-bottom:18px}
+.panel-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.panel-title h2{margin:0;font-size:18px}.panel-title span,.stat span,small{color:$muted;font-size:13px}.stat{padding:18px}.stat strong{display:block;font-size:28px;margin-top:7px}
+.panel form{display:grid;gap:10px}input,textarea,select{width:100%;background:$surface-2;border:1px solid $border;border-radius:11px;color:$text;padding:12px 13px;outline:none}textarea{min-height:90px;resize:vertical}input:focus,textarea:focus,select:focus{border-color:$accent}
+button{border:0;border-radius:11px;padding:11px 15px;background:$accent;color:white;font-weight:700}.ghost{background:transparent;border:1px solid $border;color:$text}.danger{background:transparent;border:1px solid rgba(255,93,115,.35);color:$danger}
+.alert{padding:12px 14px;border:1px solid rgba(255,93,115,.35);background:rgba(255,93,115,.08);border-radius:12px;margin-bottom:18px;color:#ffb1bc}
+.card{padding:16px}.card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.card h3{margin:0}.card p,.task p{color:$muted;font-size:14px;line-height:1.5}.badge{font-size:10px;text-transform:uppercase;padding:5px 8px;border-radius:999px;background:$surface-2;color:$muted}
+.actions,.task-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.actions button,.task-meta button{padding:8px 10px;font-size:12px}.empty{padding:28px;text-align:center;color:$muted;border:1px dashed $border;border-radius:12px}
+.task{display:flex;justify-content:space-between;gap:18px;padding:15px}.task strong{display:block;margin-bottom:5px}.task p{margin:0}.task-meta{margin:0;align-items:center}.task-meta>span{font-size:11px;color:$muted;text-transform:uppercase}
