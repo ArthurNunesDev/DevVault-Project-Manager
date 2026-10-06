@@ -34,6 +34,7 @@
 - [ ] Testes automatizados
 - [ ] Swagger/OpenAPI
 - [ ] Melhorias de UI/UX e responsividade
+- [x] Configuração do frontend para deploy Vite/Vercel
 - [ ] Deploy
 
 ## Arquitetura
@@ -92,6 +93,25 @@ npm run dev
 ```
 
 Frontend: `http://localhost:5173`
+
+### Deploy do frontend
+
+O frontend React/Vite está preparado para publicação separada no Vercel.
+
+No projeto da Vercel:
+- **Root Directory:** `frontend`
+- **Framework Preset:** Vite
+- **Build Command:** `npm run build`
+- **Output Directory:** `dist`
+- **Environment Variable:** `VITE_API_URL`
+
+Em produção, `VITE_API_URL` deve apontar para a URL pública do backend Spring Boot, por exemplo:
+
+`VITE_API_URL=https://seu-backend.exemplo.com/api`
+
+Para desenvolvimento local, `frontend/.env.example` mantém `http://localhost:8081/api`.
+
+A Vercel permite configurar variáveis por ambiente; após alterar uma variável, é necessário fazer um novo deploy.
 
 ## Tecnologias
 
