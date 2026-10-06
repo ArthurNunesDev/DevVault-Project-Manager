@@ -1,6 +1,6 @@
 package com.devvault.controller;
 import com.devvault.dto.*; import com.devvault.service.TaskService; import jakarta.validation.Valid; import org.springframework.http.*; import org.springframework.web.bind.annotation.*; import java.util.*;
-@RestController @RequestMapping("/api/tasks") @CrossOrigin(origins="http://localhost:5173")
+@RestController @RequestMapping("/api/tasks")
 public class TaskController {
  private final TaskService service; public TaskController(TaskService s){service=s;}
  @GetMapping public List<TaskResponse> all(){return service.all();}
