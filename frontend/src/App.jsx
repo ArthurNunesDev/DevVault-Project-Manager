@@ -1,6 +1,6 @@
 import {useEffect,useState} from 'react';
 
-const API='http://localhost:8081/api';
+const API=(import.meta.env.VITE_API_URL||'http://localhost:8081/api').replace(/\/$/,'');
 const emptyProject={name:'',description:'',status:'PLANNED'};
 const emptyTask={title:'',description:'',status:'TODO',priority:'MEDIUM',dueDate:'',projectId:''};
 
