@@ -95,7 +95,7 @@ No Linux/macOS:
 
 ```bash
 cd backend
-./mvnw spring-boot:run
+mvn spring-boot:run
 ```
 
 A API ficará disponível em:
