@@ -1,10 +1,11 @@
-FROM eclipse-temurin:21-jdk-alpine
+FROM maven:3.9.16-eclipse-temurin-21-alpine
 
 WORKDIR /app
 
-COPY . .
+COPY pom.xml .
+COPY src ./src
 
-RUN chmod +x mvnw && ./mvnw -DskipTests clean package
+RUN mvn -B -DskipTests clean package
 
 EXPOSE 8081
 
